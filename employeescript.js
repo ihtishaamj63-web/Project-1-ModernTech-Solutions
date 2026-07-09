@@ -190,7 +190,7 @@ function employeeRenderCard(employees) {
     <div class="emp-row__head emp-row">${headerCols}</div>
     ${employees.map((emp) => {
       let rowCols = `
-        <div class="emp-row__name" data-label="Name"><div class="emp-row__avatar">${employeeGetInitials(emp.name)}</div><span>${emp.name}</span></div>
+        <div class="emp-row__name" data-label="Name"><div class="emp-row__avatar" style="background:${window.ModernTechUtils ? window.ModernTechUtils.getDepartmentColor(emp.department) : 'var(--primary)'}">${employeeGetInitials(emp.name)}</div><span>${emp.name}</span></div>
         <div class="emp-row__muted" data-label="Dept">${emp.department}</div>
         <div class="emp-row__muted" data-label="Position">${emp.position}</div>`;
       if (isHR) {
