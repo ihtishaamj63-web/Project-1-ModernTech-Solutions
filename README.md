@@ -196,10 +196,3 @@ The system is designed for:
 
 At **ModernTech Solutions**, our vision is to deliver innovative and practical digital solutions that empower businesses to manage their workforce more efficiently. This HR Management System reflects our commitment to creating technology that improves productivity, enhances organization, and supports business growth.
 
----
-
-## 📄 License
-
-This project was developed for educational purposes as part of a software development programme.
-
-© 2026 ModernTech Solutions. All Rights Reserved.
