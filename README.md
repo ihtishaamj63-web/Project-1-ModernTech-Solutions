@@ -81,7 +81,7 @@ Designed with a clean and intuitive interface, the system helps organizations im
 
 ## 📁 Project Structure
 
-
+```
 Project-1-ModernTech-Solutions-main
 │
 ├── index.html
@@ -107,7 +107,7 @@ Project-1-ModernTech-Solutions-main
 ├── data.json
 ├── employee_info.json
 └── payroll.json
-
+```
 
 ---
 
