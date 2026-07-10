@@ -141,18 +141,26 @@ function initReviews() {
       .join("");
   }
 
-  const search = document.getElementById("search");
-  if (search) {
-    search.addEventListener("keyup", function () {
-      const filter = search.value.toLowerCase();
-      document.querySelectorAll("#reviewsTableBody tr").forEach((row) => {
-        const nameEl = row.querySelector(".att-employee-name");
-        if (nameEl)
-          row.style.display = nameEl.textContent.toLowerCase().includes(filter)
-            ? ""
-            : "none";
+  const searchContainer = document.querySelector(".rev-search");
+  if (searchContainer) {
+    const searchInput = searchContainer.querySelector("#search");
+    if (!isHR) {
+      // Remove the whole search container for non-HR users to hide input and button
+      searchContainer.remove();
+    } else if (searchInput) {
+      searchInput.addEventListener("keyup", function () {
+        const filter = searchInput.value.toLowerCase();
+        document.querySelectorAll("#reviewsTableBody tr").forEach((row) => {
+          const nameEl = row.querySelector(".att-employee-name");
+          if (nameEl)
+            row.style.display = nameEl.textContent
+              .toLowerCase()
+              .includes(filter)
+              ? ""
+              : "none";
+        });
       });
-    });
+    }
   }
 
   function loadEmployees() {
