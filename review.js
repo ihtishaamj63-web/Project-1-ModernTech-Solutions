@@ -97,8 +97,17 @@ function initReviews() {
     return savedReviews;
   }
 
+  function getVisibleReviews() {
+    const all = getAllReviews();
+    if (isHR || !currentUser || !currentUser.name) return all;
+    const currentName = String(currentUser.name).toLowerCase();
+    return all.filter(
+      (r) => r && r.name && String(r.name).toLowerCase() === currentName,
+    );
+  }
+
   function renderReviewsTable() {
-    const reviews = getAllReviews();
+    const reviews = getVisibleReviews();
     const tbody = document.getElementById("reviewsTableBody");
     if (!tbody) return;
 
@@ -289,7 +298,7 @@ function initReviews() {
   }
 
   function generatePDF() {
-    const reviews = getAllReviews();
+    const reviews = getVisibleReviews();
     if (reviews.length === 0) {
       showToast("No reviews to download.", "danger");
       return;
