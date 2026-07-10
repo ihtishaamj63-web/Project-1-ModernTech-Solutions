@@ -1,198 +1,210 @@
-# ModernTech Solutions – HR Management System
+ModernTech Solutions – HR Management System
 
-## 📖 Overview
+📋 Overview
+The ModernTech Solutions HR Management System is a front-end web application that centralizes human resource management. It replaces disconnected spreadsheets, email chains, and Word documents with a single platform for managing employees, tracking attendance, processing payroll, handling leave requests, and storing performance reviews. The system uses dummy data to simulate full functionality and demonstrates role-based access, distinguishing between HR administrators and regular employees.
 
-The **ModernTech Solutions HR Management System** is a web-based application developed to simplify and modernize Human Resource management. The system provides HR professionals with a centralized platform to manage employees, monitor attendance, process payroll, track performance reviews, and manage employee leave.
+✨ Features
 
-Designed with a clean and intuitive interface, the system helps organizations improve efficiency, reduce manual administration, and support informed decision-making.
+🔐 Login System
 
----
+Mock authentication with hardcoded credentials
 
-## 🎯 Project Objectives
+Role-based access: HR sees full system, employees see only their own data
 
-- Simplify HR management processes.
-- Centralize employee information.
-- Improve attendance tracking.
-- Organize payroll management.
-- Monitor employee performance.
-- Manage employee leave requests.
-- Provide a user-friendly dashboard for HR managers.
+Demo credentials displayed on the login page
 
----
+📊 Dashboard
 
-## ✨ Features
+Company-wide statistics: total employees, attendance rate, pending leave requests, completed reviews, payroll summary
 
-### 🔐 Login
-- User login interface
-- Secure entry point into the system
-- Professional company branding
+Attendance trend chart and payroll breakdown chart
 
-### 📊 Dashboard
-- Overview of key HR statistics
-- Employee summary
-- Attendance overview
-- Payroll insights
-- Performance review summary
+Recent time off requests and performance reviews side by side
 
-### 👥 Employee Management
-- View employee records
-- Add new employees
-- Edit employee information
-- Delete employee records
-- Search employees
+All stat cards link directly to their respective pages
 
-### 🕒 Attendance Management
-- Record employee attendance
-- View attendance history
-- Weekly attendance summaries
-- Attendance tracking
+Employee view shows personalized stats only
 
-### 💰 Payroll Management
-- View payroll information
-- Salary summaries
-- Payroll overview
-- Employee payroll records
+👥 Employee Management
 
-### ⭐ Performance Reviews
-- Add performance reviews
-- View review history
-- Edit reviews
-- Delete reviews
-- Search review records
+Centralized directory with search and department filters
 
-### 🗓 Time Off Management
-- View leave requests
-- Manage employee leave
-- Track employee time off
+Add new employees with smart forms: department-specific positions and salary ranges
 
----
+Edit and delete existing employees
 
-## 🛠 Technologies Used
+Employee view hides salary, contact information, employee ID, and action buttons
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- Git
-- GitHub
-- Visual Studio Code
+🏖️ Time Off Management
 
----
+Employees submit leave requests for themselves only
 
-## 📁 Project Structure
+HR approves or denies requests with Approve, Deny, Cancel, and Reverse actions
 
-```
-Project-1-ModernTech-Solutions-main
-│
-├── index.html
+Date validation prevents past dates, limits 30 days per request and 60 days per year
+
+Expired pending requests are auto-denied
+
+Confirmation modals replace browser popups for all actions
+
+Employee view shows only their own requests
+
+📅 Attendance Tracking
+
+Visual stacked bar chart: green for present, red for absent, orange for leave
+
+Summary cards show present, absent, on leave counts and attendance rate
+
+One-click attendance logging for HR
+
+Full weekly history view with day-by-day breakdown
+
+Leave approvals automatically update attendance records
+
+Excel export with three sheets: Summary, Detailed Attendance, Leave Requests
+
+Employee view shows only their own record
+
+💰 Payroll Management
+
+Automated calculations: PAYE (18%), UIF (1%), Medical Aid (22%), Pension (7.5%)
+
+Digital payslips with full breakdown for each employee
+
+Excel export of payroll register
+
+PDF payslip download for individual employees
+
+Employee view shows only their own payslip
+
+⭐ Performance Reviews
+
+Centralized, searchable review database
+
+Add reviews with employee selector and star ratings
+
+Delete outdated reviews
+
+PDF download for reporting
+
+Employee view is read-only with no add or delete buttons
+
+🔧 Shared Features
+
+Night mode toggle across all pages
+
+Dynamic date display with calendar icon
+
+Toast notifications for user feedback
+
+Responsive design for desktop, tablet, and mobile
+
+Data persistence using browser localStorage
+
+Changes on one page reflect across all connected pages
+
+🚀 How to Launch
+🌐 Live Demo (GitHub Pages)
+Access the hosted application directly at your GitHub Pages URL — no local setup required.
+
+💻 Running Locally
+If running from your local machine, a local server is required because browsers block JSON file loading from file:// paths.
+
+Option 1: Using Python
+bash
+cd Project-1-ModernTech-Solutions
+python -m http.server 8000
+Open http://localhost:8000/login.html in your browser.
+
+Option 2: Using Node.js
+bash
+cd Project-1-ModernTech-Solutions
+npx serve .
+Open the URL shown in the terminal.
+
+Option 3: Using VS Code Live Server
+
+Install the Live Server extension
+
+Right-click login.html and select "Open with Live Server"
+
+🔑 Login Credentials:
+
+HR Manager: lungile.moyo@moderntech.com / hrpass123
+
+HR Admin: hr@moderntech.com / hrpass
+
+Employee: sibongile.nkosi@moderntech.com / password123
+
+🧭 Navigating the Application
+After logging in, use the navigation bar at the top of each page to move between sections:
+
+Dashboard — Overview of all HR metrics
+
+Employees — View, search, filter, add, edit, and delete employee records
+
+Payroll — View payslips and export payroll data
+
+Time Off — Submit and manage leave requests
+
+Attendance — Log and track employee attendance
+
+Review — Manage performance reviews
+
+The user profile in the navigation bar shows the logged-in user's name and role. The moon icon toggles between light and dark mode. The logout button returns to the login page.
+
+🛠️ Technologies Used
+HTML5
+
+CSS3
+
+Bootstrap 5
+
+Vanilla JavaScript
+
+Chart.js
+
+SheetJS (xlsx)
+
+JSON and localStorage
+
+GitHub Pages
+
+📁 Project Structure
+text
+Project-1-ModernTech-Solutions
 ├── login.html
-├── add-employee.html
+├── home.html
 ├── employees.html
-├── attendance.html
+├── add-employee.html
 ├── payroll.html
-├── reviews.html
 ├── timeoff.html
-│
+├── attendance.html
+├── reviews.html
 ├── shared.css
-│
-├── dashboard.js
-├── attendance.js
-├── payroll.js
-├── review.js
-├── employeescript.js
+├── data.js
 ├── auth.js
 ├── utils.js
-│
-├── data.js
+├── dashboard.js
+├── employeescript.js
+├── payroll.js
+├── timeoff.js
+├── attendance.js
+├── review.js
 ├── data.json
 ├── employee_info.json
 └── payroll.json
-```
 
----
+👨‍💻 Team Roles
+Ihtishaam Johnson — Login system, Time Off page, Attendance page, dynamic data flow between all pages
 
-## 🚀 Getting Started
+Owam Gobińca — Dashboard page, Reviews page
 
-### 1. Clone the Repository
+Zahraa Moerat — Figma design, Employees page, Add Employee page
 
-```bash
-git clone https://github.com/<your-username>/Project-1-ModernTech-Solutions.git
-```
+Migcobo Macilikishe — Payroll page
 
-### 2. Open the Project
+All team members contributed to the shared styling.
 
-Open the project folder in **Visual Studio Code**.
-
-### 3. Run the Application
-
-Open **index.html** in your preferred web browser.
-
----
-
-## 💼 Business Value
-
-The HR Management System helps organizations:
-
-- Improve operational efficiency
-- Reduce paperwork
-- Centralize HR information
-- Simplify employee management
-- Improve attendance monitoring
-- Organize payroll processing
-- Support employee performance management
-
----
-
-## 🎨 Design Principles
-
-The application was developed with a focus on:
-
-- Clean and modern design
-- User-friendly navigation
-- Professional branding
-- Consistent interface
-- Responsive layout
-- Easy accessibility
-
----
-
-## 🔮 Future Improvements
-
-Potential future enhancements include:
-
-- Secure authentication and user roles
-- Database integration
-- Employee self-service portal
-- Leave approval workflow
-- Email notifications
-- PDF and Excel report generation
-- Analytics dashboard
-- Mobile application support
-- Cloud-based deployment
-
----
-
-## 👨‍💻 Development Team
-
-This project was collaboratively developed by the **ModernTech Solutions Development Team** using GitHub for version control and collaborative development.
-
-Each team member contributed to different modules of the application, ensuring the successful delivery of a complete HR Management System.
-
----
-
-## 🎯 Target Users
-
-The system is designed for:
-
-- Human Resource Departments
-- Business Managers
-- Office Administrators
-- Small Businesses
-- Medium-sized Businesses
-
----
-
-## 🌍 Vision
-
-At **ModernTech Solutions**, our vision is to deliver innovative and practical digital solutions that empower businesses to manage their workforce more efficiently. This HR Management System reflects our commitment to creating technology that improves productivity, enhances organization, and supports business growth.
-
+🔄 Data Flow
+The system uses shared localStorage keys so pages communicate with each other. Adding an employee on the Employees page makes them available on the Time Off, Attendance, and Payroll pages. Approving a leave request on the Time Off page automatically updates the Attendance page. The Dashboard reflects live changes from every section.
