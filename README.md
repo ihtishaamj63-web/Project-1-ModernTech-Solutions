@@ -200,9 +200,9 @@ Ihtishaam Johnson — Login system, Time Off page, Attendance page, dynamic data
 
 Owam Gobińca — Dashboard page, Reviews page
 
-Zahraa Moerat — Figma design, Employees page, Add Employee page
+Zahraa Moerat — Figma design, Employees page, Add-Employee page
 
-Migcobo Macilikishe — Payroll page
+Migcobo Macilikishe — Payroll page and pay slips
 
 All team members contributed to the shared styling.
 
